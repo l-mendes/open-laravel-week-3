@@ -32,7 +32,7 @@ class Sku extends Model
     public function features(): BelongsToMany
     {
         return $this->belongsToMany(Feature::class)
-            ->using(SkuFeature::class)
+            ->using(FeatureSku::class)
             ->withPivot('value');
     }
 }
